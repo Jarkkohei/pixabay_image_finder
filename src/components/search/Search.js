@@ -18,12 +18,17 @@ class Search extends Component {
     }
 
     onTextChange = (event) => {
+        const val = event.target.value;
         this.setState({
-            [event.target.name]: event.target.value
+            [event.target.name]: val
         }, () => {
-            axios.get(`${this.state.apiUrl}/?key=${this.state.apikey}&q=${this.state.searchText}&image_type=photo&per_page=${this.state.amount}&safesearch=true`)
-                .then(response => this.setState({ images: response.data.hits }))
-                .catch(error => console.log(error))
+            if(val === '') {
+                this.setState({ images: [] });
+            } else {
+                axios.get(`${this.state.apiUrl}/?key=${this.state.apikey}&q=${this.state.searchText}&image_type=photo&per_page=${this.state.amount}&safesearch=true`)
+                    .then(response => this.setState({ images: response.data.hits }))
+                    .catch(error => console.log(error))
+            }
         });
     };
 
