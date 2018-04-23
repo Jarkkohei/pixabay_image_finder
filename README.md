@@ -1,9 +1,8 @@
-Pixabay image finder app from Traversy Media Youtube course - React & Material UI Project Using The PixaBay API
+PixaBay image finder app from Traversy Media Youtube course - React & Material UI Project Using The PixaBay API
 
-npm install
-npm start
-Add your PixaBay API key as 'apikey' to the 'components/search/Search.js' -file.
+Add your PixaBay API key as 'apikey' to the 'components/search/Search.js' -file.<br>
 
+## -
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
